@@ -1,22 +1,24 @@
+import { useContext } from 'react'
 import styled from "styled-components";
 import BtnLoging from "./BtnLoging";
 import { colors } from "../theme/helpers";
+import { FirebaseContext } from "../firebase"
 
 const SignIn = ({ className }) => {
-  const handleClick = () => {
-    console.log("j'ai click !");
-  };
+  const { firebase } = useContext(FirebaseContext)
+
+  
   return (
     <div className={className}>
       <p>Sign in with:</p>
-      <BtnLoging btnColor={colors.primary} click={handleClick}>
-        <i class="fab fa-google"></i>Google
+      <BtnLoging btnColor={colors.primary} click={() => firebase.login('google')}>
+        <i className="fab fa-google"></i>Google
       </BtnLoging>
-      <BtnLoging btnColor={colors.facebook}>
+      <BtnLoging btnColor={colors.facebook} click={() => firebase.login('facebook')}>
         <i className="fab fa-facebook-square"></i>Facebook
       </BtnLoging>
-      <BtnLoging btnColor={colors.grey}>
-        <i class="fab fa-github"></i>Github
+      <BtnLoging btnColor={colors.grey} click={() => firebase.login('github')}>
+        <i className="fab fa-github"></i>Github
       </BtnLoging>
     </div>
   );
