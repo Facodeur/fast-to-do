@@ -1,12 +1,21 @@
+import Titre from '../components/Titre'
 import SignIn from '../components/SignIn'
+import styled from 'styled-components'
 
 
-const Home = () => {
+const Home = ({ className }) => {
   return (
-    <div>
+    <div className={className}>
+      <Titre />
       <SignIn />
     </div>
   )
 }
 
-export default Home
+export default styled(Home)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+`

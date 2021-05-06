@@ -6,7 +6,8 @@ export const colors = {
   white: '#f1f4f5',
   black: '#20272b',
   grey: '#354147',
-  lightGrey: '#969ea2'
+  lightGrey: '#969ea2',
+  facebook: '#3b5998'
 }
 
 export const pxToRem = (px = 16) => {
