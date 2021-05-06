@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { pxToRem } from "../theme/helpers";
+import { pxToRem, media } from "../theme/helpers";
 
 const Titre = ({ className }) => {
   return (
@@ -10,13 +10,21 @@ const Titre = ({ className }) => {
 };
 
 export default styled(Titre)`
-  margin-right: ${pxToRem(20)};
+  margin: ${pxToRem(20)};
   p {
     margin: 0;
   }
 
   h1 {
-    font-size: ${pxToRem(60)};
+    font-size: ${pxToRem(42)};
     font-family: "Faster One", cursive;
+  }
+  ${
+    media.small`
+    h1 {
+      font-size: ${pxToRem(60)};
+    }
+      
+    `
   }
 `;

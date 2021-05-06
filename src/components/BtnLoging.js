@@ -10,6 +10,8 @@ const BtnLoging = ({className, children, click}) => {
 }
 
 export default styled(BtnLoging)`
+  display: flex;
+  align-items: center;
   background: ${props => props.btnColor};
   color: ${colors.white};
   margin: ${pxToRem(10)};
