@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import BtnLoging from './BtnLoging'
-import { pxToRem, colors } from '../theme/helpers'
+import { colors } from '../theme/helpers'
 
 
 const SignIn = ({ className }) => {
