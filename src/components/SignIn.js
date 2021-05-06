@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import styled from "styled-components";
-import BtnLoging from "./BtnLoging";
+import BtnLog from "./BtnLog";
 import { colors } from "../theme/helpers";
 import { FirebaseContext } from "../firebase"
 
@@ -11,15 +11,15 @@ const SignIn = ({ className }) => {
   return (
     <div className={className}>
       <p>Sign in with:</p>
-      <BtnLoging btnColor={colors.primary} click={() => firebase.login('google')}>
+      <BtnLog btnColor={colors.primary} click={() => firebase.login('google')}>
         <i className="fab fa-google"></i>Google
-      </BtnLoging>
-      <BtnLoging btnColor={colors.facebook} click={() => firebase.login('facebook')}>
+      </BtnLog>
+      <BtnLog btnColor={colors.facebook} click={() => firebase.login('facebook')}>
         <i className="fab fa-facebook-square"></i>Facebook
-      </BtnLoging>
-      <BtnLoging btnColor={colors.grey} click={() => firebase.login('github')}>
+      </BtnLog>
+      <BtnLog btnColor={colors.grey} click={() => firebase.login('github')}>
         <i className="fab fa-github"></i>Github
-      </BtnLoging>
+      </BtnLog>
     </div>
   );
 };
