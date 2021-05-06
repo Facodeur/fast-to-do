@@ -1,13 +1,16 @@
 import GlobalStyle from './theme/GlobalStyle'
 import Home from './pages/Home'
-
+import firebase, { FirebaseContext } from './firebase'
+import useAuth from './hooks/useAuth'
 
 const App = () => {
+  const user = useAuth();
+  
   return (
-    <div className="App">
+    <FirebaseContext.Provider value={{ user, firebase }}>
       <GlobalStyle />
       <Home />
-    </div>
+    </FirebaseContext.Provider>
   );
 }
 
