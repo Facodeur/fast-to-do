@@ -11,9 +11,11 @@ const App = () => {
   return (
     <FirebaseContext.Provider value={{ user, firebase }}>
       <GlobalStyle />
-      <PrivateIsAuth fallback={<Home />}>
-        <Todo />
-      </PrivateIsAuth>
+      
+      {user ? <Todo /> : <Home />}
+      
+        
+     
       
     </FirebaseContext.Provider>
   );
