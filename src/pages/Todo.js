@@ -1,18 +1,15 @@
-import { useContext } from 'react'
-import { FirebaseContext } from '../firebase'
-import BtnLog from '../components/BtnLog'
-import { colors } from "../theme/helpers";
+import styled from "styled-components";
+import Slider from "../components/Slider";
 
-
-
-const Todo = () => {
-const { firebase } = useContext(FirebaseContext);
-
+const Todo = ({ className }) => {
   return (
-    <div>
+    <div className={className}>
+      <Slider />
       Todo
     </div>
-  )
-}
+  );
+};
 
-export default Todo
+export default styled(Todo)`
+  display: flex;
+`;
