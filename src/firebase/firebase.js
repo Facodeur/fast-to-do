@@ -20,7 +20,7 @@ class Firebase {
 
   logout = async () => {
     await this.auth.signOut();
-  }
+  };
 }
 
 const firebase = new Firebase();
