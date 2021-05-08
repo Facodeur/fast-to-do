@@ -4,6 +4,7 @@ import styled from "styled-components";
 import BtnLogin from "./BtnLogin";
 import { colors, pxToRem } from "../theme/helpers";
 import User from "./User";
+import InputAjoutList from "./InputAjoutList";
 
 const Slider = ({ className }) => {
   const { firebase, user } = useContext(FirebaseContext);
@@ -11,10 +12,10 @@ const Slider = ({ className }) => {
   return (
     <div className={className}>
       <User />
-
       <BtnLogin className="text-center" btnColor={colors.grey} click={() => firebase.logout()}>
         Logout
       </BtnLogin>
+      <InputAjoutList />
     </div>
   );
 };
