@@ -25,6 +25,9 @@ const Global = createGlobalStyle`
     .bold {
         font-weight: 700;
     }
+    .text-center {
+        justify-content: center;
+    }
     
 `
 
