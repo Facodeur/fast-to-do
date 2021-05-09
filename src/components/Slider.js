@@ -5,6 +5,7 @@ import ButtonLog from "./ButtonLog";
 import { colors, pxToRem } from "../theme/helpers";
 import User from "./User";
 import InputAjoutList from "./InputAjoutList";
+import ListeTodo from "./ListeTodo";
 
 const Slider = ({ className }) => {
   const { firebase, user } = useContext(FirebaseContext);
@@ -16,6 +17,7 @@ const Slider = ({ className }) => {
         Logout
       </ButtonLog>
       <InputAjoutList />
+      <ListeTodo />
     </div>
   );
 };
