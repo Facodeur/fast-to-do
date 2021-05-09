@@ -1,18 +1,24 @@
 import { useState } from "react";
 import styled from "styled-components";
+import useForm from "../hooks/useForm";
+
+const initialState = {
+  titre: ""
+}
 
 const InputAjoutList = ({ className }) => {
-  const [value, setValue] = useState('')
+  const { handleChange, values, setValues } = useForm(initialState)
+  
   return (
     <div className={className}>
       <input 
-        name="liste" 
+        name="titre"
         type="text" 
         placeholder="Nouvelle liste"
-        value={value}
-        onChange={e => setValue(e.target.value)}
+        value={values.titre}
+        onChange={handleChange}
       />
-      <button onClick={() => console.log(value)}>
+      <button onClick={() => console.log(values.titre)}>
         <i className="fas fa-plus"></i>
       </button>
     </div>
