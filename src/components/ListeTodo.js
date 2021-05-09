@@ -28,7 +28,7 @@ const [liste, setListe] = useState([])
   return (
     <div className={className}>
       {liste && liste.map(list => (
-        <p key={list.id}>{list.titre} <i class="fas fa-list-ul"></i></p>
+        <p key={list.id}>{list.titre} <i className="fas fa-list-ul"></i></p>
       ))}
     </div>
   )
