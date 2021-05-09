@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { FirebaseContext } from "../firebase";
 import styled from "styled-components";
-import BtnLogin from "./BtnLogin";
+import ButtonLog from "./ButtonLog";
 import { colors, pxToRem } from "../theme/helpers";
 import User from "./User";
 import InputAjoutList from "./InputAjoutList";
@@ -12,9 +12,9 @@ const Slider = ({ className }) => {
   return (
     <div className={className}>
       <User />
-      <BtnLogin className="text-center" btnColor={colors.grey} click={() => firebase.logout()}>
+      <ButtonLog className="text-center" btnColor={colors.grey} click={() => firebase.logout()}>
         Logout
-      </BtnLogin>
+      </ButtonLog>
       <InputAjoutList />
     </div>
   );

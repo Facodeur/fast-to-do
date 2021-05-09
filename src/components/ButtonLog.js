@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { pxToRem, colors } from '../theme/helpers'
 
-const BtnLoging = ({className, children, click}) => {
+const ButtonLog = ({className, children, click}) => {
   return (
     <button className={className} onClick={click}>
       {children}
@@ -9,7 +9,7 @@ const BtnLoging = ({className, children, click}) => {
   )
 }
 
-export default styled(BtnLoging)`
+export default styled(ButtonLog)`
   display: flex;
   align-items: center;
   background: ${props => props.btnColor};

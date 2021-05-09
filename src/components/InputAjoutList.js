@@ -12,8 +12,8 @@ const InputAjoutList = ({ className }) => {
         value={value}
         onChange={e => setValue(e.target.value)}
       />
-      <button>
-        <i class="fas fa-plus"></i>
+      <button onClick={() => console.log(value)}>
+        <i className="fas fa-plus"></i>
       </button>
     </div>
   );
