@@ -1,5 +1,8 @@
 # Getting Started with Create React App
 
+
+see install [here](fast-to-do/installation.md)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
