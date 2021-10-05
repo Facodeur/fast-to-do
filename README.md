@@ -1,7 +1,7 @@
 # Getting Started with Create React App
 
 
-see install [here](fast-to-do/blob/main/installation.md)
+see install [here](https://github.com/Facodeur/fast-to-do/blob/main/installation.md)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
