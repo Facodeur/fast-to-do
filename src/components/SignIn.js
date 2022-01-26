@@ -3,7 +3,7 @@ import styled from "styled-components";
 import ButtonLog from "./ButtonLog";
 import { colors } from "../theme/helpers";
 import { FirebaseContext } from "../firebase"
-import { isEmbedded } from "react-device-detect"
+// import { isEmbedded } from "react-device-detect"
 
 const SignIn = ({ className }) => {
   const { firebase } = useContext(FirebaseContext)
