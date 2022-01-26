@@ -15,7 +15,7 @@ const SignIn = ({ className }) => {
       <ButtonLog btnColor={colors.primary} click={() => {
 
         
-        if(isEmbedded) {
+        if(window.innerWidth < 700) {
          return firebase.loginRedirect('google');
         } else {
          return firebase.login('google')
