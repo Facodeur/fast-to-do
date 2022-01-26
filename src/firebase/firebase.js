@@ -12,12 +12,15 @@ class Firebase {
     this.googleProvider = new app.auth.GoogleAuthProvider()
     this.facebookProvider = new app.auth.FacebookAuthProvider()
     this.githubProvider = new app.auth.GithubAuthProvider()
-
   }
   
   // Authentification
   login = async provider => {
     await this.auth.signInWithPopup(this[`${provider}Provider`])
+  }
+
+  loginRedirect = async provider => {
+    await this.auth.signInWithRedirect(this[`${provider}Provider`])
   }
 
   logout = async () => {

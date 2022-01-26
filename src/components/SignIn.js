@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ButtonLog from "./ButtonLog";
 import { colors } from "../theme/helpers";
 import { FirebaseContext } from "../firebase"
+import { isEmbedded } from "react-device-detect"
 
 const SignIn = ({ className }) => {
   const { firebase } = useContext(FirebaseContext)
@@ -11,7 +12,16 @@ const SignIn = ({ className }) => {
   return (
     <div className={className}>
       <p>Sign in with:</p>
-      <ButtonLog btnColor={colors.primary} click={() => firebase.login('google')}>
+      <ButtonLog btnColor={colors.primary} click={() => {
+
+        
+        if(isEmbedded) {
+         return firebase.loginRedirect('google');
+        } else {
+         return firebase.login('google')
+        }
+        
+      } }>
         <i className="fab fa-google"></i>Google
       </ButtonLog>
       <ButtonLog btnColor={colors.facebook} click={() => firebase.login('facebook')}>

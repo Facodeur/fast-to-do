@@ -17,7 +17,8 @@ const InputAjoutList = ({ className }) => {
     console.log(values.titre)
     const liste = {
       user: user.uid,
-      titre: values.titre
+      titre: values.titre,
+      liste: []
     }
     firebase.db.collection('fastodo').add(liste)
 
